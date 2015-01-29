@@ -7,7 +7,8 @@
  */
 
 // Predefine the variables below in order to alter and enable specific features.
-$inuit-tabs-namespace: $inuit-namespace !default;
+$inuit-object-namespace: null !default;
+$inuit-tabs-namespace:   $inuit-namespace !default;
 
 /**
  * 1. Reset any residual styles (most likely from lists).
@@ -16,8 +17,8 @@ $inuit-tabs-namespace: $inuit-namespace !default;
  * 4. Force the object to be the full width of its parent. Combined with [2],
  *    this makes the object behave in a quasi-`display: block;` manner.
  */
-.#{$inuit-tabs-namespace}tabs,
-%#{$inuit-tabs-namespace}tabs {
+.#{$inuit-object-namespace}#{$inuit-tabs-namespace}tabs,
+%#{$inuit-object-namespace}#{$inuit-tabs-namespace}tabs {
     margin:  0; /* [1] */
     padding: 0; /* [1] */
     list-style: none; /* [1] */
